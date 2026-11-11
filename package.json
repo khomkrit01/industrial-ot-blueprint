@@ -1,0 +1,30 @@
+{
+  "name": "transformer-impregnation-system",
+  "version": "1.53.0",
+  "private": true,
+  "description": "Transformer Oil Impregnation Time Tracking & Analysis System",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "postinstall": "node tools/postinstall.cjs",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present",
+    "dev:backend": "npm --workspace=@transformer-impregnation-system/backend-service run dev",
+    "dev:collector": "npm --workspace=@transformer-impregnation-system/collector-service run dev",
+    "dev:hmi": "npm --workspace=@transformer-impregnation-system/frontend-hmi run dev",
+    "license:keygen": "tsx tools/license-keygen.ts",
+    "release:pack": "tsx tools/build-release.ts",
+    "release:customer": "tsx tools/customer-release.ts",
+    "release:github": "tsx tools/publish-github-release.ts"
+  },
+  "devDependencies": {
+    "@rollup/wasm-node": "^4.68.2",
+    "@types/node": "^22.5.0",
+    "esbuild-wasm": "^0.28.2",
+    "tsx": "^4.15.0",
+    "typescript": "^5.5.0",
+    "vitest": "^1.6.0"
+  }
+}

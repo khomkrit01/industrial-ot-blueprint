@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs & Release bundles
+dist/
+packages/*/dist/
+packages/*/*.tsbuildinfo
+*.tsbuildinfo
+dist-release/
+releases/
+
+# Local SQLite databases, runtime logs & generated customer licenses
+data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.lic
+*.log
+service-node-path.txt
+ita-service-host.exe
+HitachiEnergyItaService.exe
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
